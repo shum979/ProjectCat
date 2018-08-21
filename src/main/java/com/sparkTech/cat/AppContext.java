@@ -1,4 +1,4 @@
-package com.sapient.cat;
+package com.sparkTech.cat;
 
 import java.io.BufferedReader;
 import java.io.IOException;

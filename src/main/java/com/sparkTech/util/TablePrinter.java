@@ -1,4 +1,4 @@
-package com.sapient.util;
+package com.sparkTech.util;
 
 /**
  * Created by Shubham A Gupta on 04-May-18.

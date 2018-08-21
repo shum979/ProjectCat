@@ -1,6 +1,6 @@
-package com.sapient.cat;
+package com.sparkTech.cat;
 
-import com.sapient.util.TablePrinter;
+import com.sparkTech.util.TablePrinter;
 
 import java.sql.*;
 
@@ -63,14 +63,22 @@ public class SampleJdbcClient {
         System.out.printf("Using url : %s with userName : %s and Password : %s",url,user,password);
 
         try {
+            System.out.println("creating Connection ...");
             Class.forName(appContext.getValue("driver.name"));
+
+            connection = DriverManager.getConnection(url, user,password);
+            System.out.println("Connection created successfully " + connection.toString());
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             System.exit(1);
+        } catch (Exception e){
+            e.printStackTrace();
+            System.exit(1);
         }
 
-        connection = DriverManager.getConnection(url, user,password);
+
+
     }
 
 
